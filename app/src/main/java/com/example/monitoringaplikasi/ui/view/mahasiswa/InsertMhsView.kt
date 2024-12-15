@@ -22,12 +22,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.modifier.modifierLocalOf
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.monitoringaplikasi.data.entity.Mahasiswa
 import com.example.monitoringaplikasi.ui.customwidget.TopAppBar
 import com.example.monitoringaplikasi.ui.navigation.AlamatNavigasi
 import com.example.monitoringaplikasi.ui.viewmodel.FormErrorState
@@ -76,7 +74,8 @@ fun InsertMhsView(
             TopAppBar(
                 onBack = onBack,
                 showBackButton = true,
-                judul = "Tambah mahasiswa"
+                judul = "Tambah mahasiswa",
+                modifier = modifier
             )
 
             // isi body
