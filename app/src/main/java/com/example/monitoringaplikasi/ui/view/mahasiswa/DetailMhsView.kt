@@ -19,7 +19,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.monitoringaplikasi.data.entity.Mahasiswa
 import com.example.monitoringaplikasi.ui.customwidget.TopAppBar
@@ -174,3 +177,27 @@ fun ItemDetailMhs(
     }
 }
 
+@Composable
+fun ComponentDetailMhs(
+    modifier: Modifier = Modifier,
+    judul: String,
+    isinya: String,
+){
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.Start
+    ) {
+        Text(
+            text = "$judul : ",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Gray
+        )
+
+        Text(
+            text = isinya,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}
